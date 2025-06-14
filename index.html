@@ -7,7 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cardContainer"></div>
+    <div class="mainContainer">
+        <div class="sideBar">
+            <form class="addBookForm" action="" method="get">
+                    <p>Book Info</p>
+                    <p class='form-row'>                        
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" name="title">
+                    </p>
+                    <p class='form-row'>
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author">
+                    </p>
+                    <p class='form-row'>
+                        <label for="pages">Number of Page</label>
+                        <input type="number" id="pages" name="pages">
+                    </p>
+
+                    <div class='alreadyReadsection'>
+                        <legend>Already read? </legend>
+
+                        <input id='readYes'
+                                name='alreadyRead'
+                                type='radio'
+                                value='true' 
+                                checked />
+                        <label for='readYes' class='radio-label'>Yes</label>
+                        <input id='readNo'
+                                name='alreadyRead'
+                                type='radio'
+                                value='false' />
+                        <label for='readNo' class='radio-label'>No</label>
+                    </div>
+
+                    <div class='form-row'>
+                        <button class='addBookButton' type="submit">Submit</button>
+                    </div>
+
+            </form>
+
+        </div>
+        <div id="cardContainer"></div>
+    </div>
     <script src="script.js"></script>
+
 </body>
 </html>
