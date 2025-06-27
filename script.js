@@ -1,6 +1,6 @@
 const myLibrary = [];
 
-function Book(bookId,title,author,pages,readstatus) {
+/* function Book(bookId,title,author,pages,readstatus) {
     if (!new.target) {
         throw Error("You must use the 'new' operator to call the constructor");
     }
@@ -10,6 +10,21 @@ function Book(bookId,title,author,pages,readstatus) {
     this.pages = pages;
     this.readstatus = readstatus;
 }
+ */
+
+class Book {
+    constructor(bookId,title,author,pages,readstatus) {
+        this.bookId = bookId;
+        this.title = title;
+        this.author= author;
+        this.pages = pages;
+        this.readstatus = readstatus;
+        }
+    }
+
+/* I can simply put this into the constructor but I t won't be efficient 
+*/
+
 
 Book.prototype.info = function() {
     if (this.readstatus) {
